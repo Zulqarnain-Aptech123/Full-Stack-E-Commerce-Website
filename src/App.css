@@ -1,36 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  color: #202435;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
 }
 
 
+/* =========================================
+   TOP STRIP
+========================================= */
+
 .bg-blue {
-  background: #233A95;
+  background: #233a95;
 }
 
 .HeaderWrapper .top-strip {
-  padding: 8px 0px;
+  width: 100%;
+  padding: 8px 0;
 }
 
 .HeaderWrapper .top-strip p {
-  color: #fff;
+  margin: 0;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 500;
 }
 
+
+/* =========================================
+   HEADER
+========================================= */
+
 .HeaderWrapper .header {
   width: 100%;
   height: auto;
-  padding: 15px 0px;
+  padding: 15px 0;
+  background: #ffffff;
+}
+
+.HeaderWrapper .header .container {
+  max-width: 1140px;
+}
+
+
+/* =========================================
+   HEADER ROW
+========================================= */
+
+.HeaderWrapper .header .row {
+  align-items: center;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.logoWrapper a {
+  display: inline-block;
 }
 
 .logoWrapper img {
+  width: 205px;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.part2 {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding-right: 0;
+}
+
+
+/* =========================================
+   LOCATION DROPDOWN
+========================================= */
+
+.countryDropDown {
+  width: 225px !important;
+  min-width: 225px !important;
+  height: 50px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  padding: 0 22px !important;
+
+  background-color: #ffffff !important;
+
+  border: 1px solid #d7dcef !important;
+  border-radius: 8px !important;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
+
+  color: #233a95 !important;
+
+  text-align: left !important;
+
+  text-transform: none !important;
+
+  cursor: pointer;
+
+  font-family: "Roboto", sans-serif !important;
+}
+
+
+/* Remove MUI Button ripple/focus appearance */
+
+.countryDropDown:hover {
+  background-color: #ffffff !important;
+}
+
+.countryDropDown:focus {
+  outline: none !important;
+}
+
+
+/* =========================================
+   LOCATION TEXT
+========================================= */
+
+.countryDropDown .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 7px;
+}
+
+.countryDropDown .label {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  color: #9da1b2;
+
+  line-height: 1;
+}
+
+.countryDropDown .countryName {
+  display: block;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #233a95;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   DROPDOWN ARROW
+========================================= */
+
+.countryDropDown>span:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+}
+
+.countryDropDown svg {
+  font-size: 16px;
+  color: #233a95;
+}
+
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.headerSearch {
+  height: 50px;
+
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0 !important;
+
+  padding: 0 20px 0 38px;
+
+  background-color: #f3f4f7;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+.headerSearch input {
   width: 100%;
+  height: 100%;
+
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  color: #333333;
+}
+
+.headerSearch input::placeholder {
+  color: #9296aa;
+  opacity: 1;
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+.headerSearch button {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.headerSearch button svg {
+  font-size: 25px;
+
+  color: #233a95;
+
+  stroke-width: 1.8;
+}
+
+
+/* =========================================
+   SEARCH BUTTON HOVER
+========================================= */
+
+.headerSearch button:hover {
+  background: transparent;
+}
+
+.headerSearch button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+header .UserIcon .UserIconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px !important;
+  height: 45px !important;
+  width: 45px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+}
+
+header .UserIcon .UserIconCircle svg {
+  font-size: 20px !important;
+  align-items: center;
+}
+
+.cartTab button {
+  background-color: #FFF1EE;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1199px) {
+
+  .HeaderWrapper .header .container {
+    max-width: 960px;
+  }
+
+  .logoWrapper img {
+    width: 185px;
+  }
+
+  .part2 {
+    gap: 20px;
+  }
+
+  .countryDropDown {
+    width: 210px !important;
+    min-width: 210px !important;
+  }
+}
+
+
+@media (max-width: 991px) {
+
+  .HeaderWrapper .header .container {
+    max-width: 720px;
+  }
+
+  .logoWrapper img {
+    width: 160px;
+  }
+
+  .part2 {
+    gap: 15px;
+  }
+
+  .countryDropDown {
+    width: 190px !important;
+    min-width: 190px !important;
+  }
+
+  .headerSearch {
+    padding-left: 25px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .HeaderWrapper .header {
+    padding: 20px 0;
+  }
+
+  .HeaderWrapper .header .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logoWrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .part2 {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .countryDropDown {
+    width: 100% !important;
+  }
+
+  .headerSearch {
+    width: 100%;
+    flex: none;
+  }
 }

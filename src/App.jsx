@@ -1,8 +1,12 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, createBrowserRouter, Route, Routes } from 'react-router'
 import './App.css';
 import Home from './Pages/Home';
 import Header from './Components/Header';
+
+const route = createBrowserRouter([
+  { path: '/', element: <Home /> }
+])
 
 function App() {
 
@@ -11,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route route={route} />
         </Routes>
       </BrowserRouter>
     </>
