@@ -1,5 +1,4 @@
-import React from 'react'
-import { FiUser } from "react-icons/fi";
+
 import { IoBagOutline } from "react-icons/io5";
 
 

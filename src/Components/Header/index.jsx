@@ -1,5 +1,4 @@
-import React from 'react';
-import Logo from '../../assets/Images/bacola-logo.png'
+import Logo from '../../assets/Images/company-name.png'
 import { Link } from 'react-router';
 import CountryDropdown from '../CountryDropDown/countrydropdown';
 import SearchBar from '../SearchBar/SearchBar';
