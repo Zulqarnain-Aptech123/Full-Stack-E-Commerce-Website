@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import CountryDropdown from '../CountryDropDown/countrydropdown';
 import SearchBar from '../SearchBar/SearchBar';
 import User from '../UserIcon/User';
+import Home from '../../Pages/Home';
 
 
 
@@ -54,6 +55,10 @@ const Header = () => {
                     </div>
 
                 </header>
+
+                <nav>
+                    <Home />
+                </nav>
 
             </div>
         </>
